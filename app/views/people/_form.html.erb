@@ -31,6 +31,13 @@
     <%= form.text_field :country %>
   </div>
 
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= image_tag(person.avatar_url) if person.avatar? %>
+    <%= form.file_field :avatar %>
+    <%= form.hidden_field :avatar_cache %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
